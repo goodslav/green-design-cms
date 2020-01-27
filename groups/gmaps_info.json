@@ -1,0 +1,31 @@
+{
+  "info": {
+    "name": "Gmaps_Info",
+    "description": ""
+  },
+  "connection": "default",
+  "collectionName": "groups_gmaps_infos",
+  "attributes": {
+    "MAP_LOCATIONS": {
+      "type": "json"
+    },
+    "MAP_STYLES": {
+      "type": "json"
+    },
+    "MAP_ZOOM": {
+      "type": "integer",
+      "default": 13,
+      "required": true,
+      "min": 1,
+      "max": 22
+    },
+    "MAP_LAT": {
+      "type": "float",
+      "required": true
+    },
+    "MAP_LNG": {
+      "type": "float",
+      "required": true
+    }
+  }
+}

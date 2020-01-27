@@ -1,0 +1,28 @@
+{
+  "info": {
+    "name": "Job_Details",
+    "description": ""
+  },
+  "connection": "default",
+  "collectionName": "groups_job_details",
+  "attributes": {
+    "Job_Title": {
+      "minLength": 2,
+      "maxLength": 250,
+      "type": "string"
+    },
+    "Department": {
+      "minLength": 5,
+      "maxLength": 250,
+      "type": "string"
+    },
+    "Company": {
+      "minLength": 2,
+      "maxLength": 250,
+      "type": "string"
+    },
+    "Date_Employed": {
+      "type": "date"
+    }
+  }
+}

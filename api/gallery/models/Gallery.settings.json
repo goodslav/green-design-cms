@@ -1,0 +1,58 @@
+{
+  "connection": "default",
+  "collectionName": "gallery",
+  "info": {
+    "name": "gallery",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "Name": {
+      "maxLength": 250,
+      "required": true,
+      "minLength": 2,
+      "type": "string"
+    },
+    "Description_Short": {
+      "maxLength": 300,
+      "minLength": 5,
+      "type": "string"
+    },
+    "Description": {
+      "maxLength": 800,
+      "minLength": 5,
+      "type": "richtext"
+    },
+    "Identifier": {
+      "maxLength": 40,
+      "required": true,
+      "unique": true,
+      "minLength": 10,
+      "type": "string"
+    },
+    "Active": {
+      "required": true,
+      "default": true,
+      "type": "boolean"
+    },
+    "Videos": {
+      "group": "videos",
+      "repeatable": true,
+      "type": "group"
+    },
+    "Images": {
+      "group": "images",
+      "repeatable": true,
+      "type": "group"
+    },
+    "project": {
+      "model": "project",
+      "via": "gallery"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "connection": "default",
+  "collectionName": "person",
+  "info": {
+    "name": "person",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "Title": {
+      "enum": [
+        "Mr",
+        "Ms",
+        "Mrs",
+        "Miss",
+        "Dr",
+        "Prof",
+        "Judge",
+        "President"
+      ],
+      "type": "enumeration"
+    },
+    "First_Name": {
+      "maxLength": 250,
+      "required": true,
+      "minLength": 2,
+      "type": "string"
+    },
+    "Last_Name": {
+      "maxLength": 250,
+      "minLength": 2,
+      "type": "string"
+    },
+    "Email": {
+      "maxLength": 250,
+      "required": true,
+      "minLength": 5,
+      "type": "email"
+    },
+    "Identifier": {
+      "maxLength": 40,
+      "required": true,
+      "unique": true,
+      "minLength": 10,
+      "type": "string"
+    },
+    "Biography": {
+      "maxLength": 800,
+      "minLength": 5,
+      "type": "text"
+    },
+    "Date_Of_Birth": {
+      "type": "date"
+    },
+    "Active": {
+      "default": true,
+      "required": true,
+      "type": "boolean"
+    },
+    "Addresses": {
+      "group": "addresses",
+      "repeatable": true,
+      "type": "group"
+    },
+    "Phones": {
+      "group": "phones",
+      "repeatable": true,
+      "type": "group"
+    },
+    "Avatar": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "Job_Details": {
+      "group": "job_details",
+      "type": "group"
+    },
+    "articles": {
+      "collection": "article",
+      "via": "person"
+    },
+    "projects": {
+      "collection": "project",
+      "via": "people",
+      "dominant": true
+    }
+  }
+}

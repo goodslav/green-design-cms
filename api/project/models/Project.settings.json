@@ -1,0 +1,70 @@
+{
+  "connection": "default",
+  "collectionName": "project",
+  "info": {
+    "name": "project",
+    "description": "Landscape Projects"
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "Name": {
+      "maxLength": 250,
+      "required": true,
+      "minLength": 1,
+      "type": "string"
+    },
+    "Description_Short": {
+      "maxLength": 300,
+      "minLength": 5,
+      "type": "string"
+    },
+    "Description": {
+      "maxLength": 1500,
+      "minLength": 5,
+      "type": "richtext"
+    },
+    "Type": {
+      "type": "string"
+    },
+    "Date_Started": {
+      "type": "date"
+    },
+    "Date_Finished": {
+      "type": "date"
+    },
+    "Images": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "Active": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "Identifier": {
+      "maxLength": 40,
+      "required": true,
+      "unique": true,
+      "minLength": 10,
+      "type": "string"
+    },
+    "categories": {
+      "collection": "category",
+      "via": "projects"
+    },
+    "gallery": {
+      "model": "gallery",
+      "via": "project"
+    },
+    "people": {
+      "collection": "person",
+      "via": "projects"
+    }
+  }
+}

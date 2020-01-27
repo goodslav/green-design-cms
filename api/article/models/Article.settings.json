@@ -1,0 +1,54 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "article",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "maxLength": 250,
+      "required": true,
+      "minLength": 2
+    },
+    "Content": {
+      "maxLength": 2000,
+      "minLength": 2,
+      "type": "richtext"
+    },
+    "Description": {
+      "maxLength": 300,
+      "minLength": 5,
+      "type": "string"
+    },
+    "Media": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "Identifier": {
+      "maxLength": 40,
+      "required": true,
+      "unique": true,
+      "minLength": 10,
+      "type": "string"
+    },
+    "Active": {
+      "default": true,
+      "required": true,
+      "type": "boolean"
+    },
+    "categories": {
+      "collection": "category",
+      "via": "articles"
+    },
+    "person": {
+      "model": "person",
+      "via": "articles"
+    }
+  }
+}

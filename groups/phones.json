@@ -1,0 +1,47 @@
+{
+  "info": {
+    "name": "Phones",
+    "description": "Telephone and Mobile Numbers"
+  },
+  "connection": "default",
+  "collectionName": "groups_phones",
+  "attributes": {
+    "Number": {
+      "type": "string",
+      "required": true,
+      "minLength": 6,
+      "maxLength": 16
+    },
+    "Type": {
+      "enum": [
+        "Mobile",
+        "Office",
+        "Home",
+        "Personal"
+      ],
+      "type": "enumeration",
+      "required": true
+    },
+    "Active": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    },
+    "Description": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 300
+    },
+    "Identifier": {
+      "required": true,
+      "unique": true,
+      "minLength": 10,
+      "maxLength": 40,
+      "type": "string"
+    },
+    "Is_Primary": {
+      "required": false,
+      "type": "boolean"
+    }
+  }
+}

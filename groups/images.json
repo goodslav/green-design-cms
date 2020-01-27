@@ -1,0 +1,37 @@
+{
+  "info": {
+    "name": "Images",
+    "description": ""
+  },
+  "connection": "default",
+  "collectionName": "groups_images",
+  "attributes": {
+    "Title": {
+      "required": true,
+      "minLength": 2,
+      "maxLength": 250,
+      "type": "string"
+    },
+    "Image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": true
+    },
+    "Active": {
+      "required": true,
+      "default": true,
+      "type": "boolean"
+    },
+    "Description": {
+      "minLength": 2,
+      "maxLength": 500,
+      "type": "string"
+    },
+    "Order": {
+      "type": "integer",
+      "required": true,
+      "default": 1
+    }
+  }
+}

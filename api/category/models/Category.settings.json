@@ -1,0 +1,59 @@
+{
+  "connection": "default",
+  "collectionName": "categories",
+  "info": {
+    "name": "category",
+    "description": "Generic field for categories and grouping"
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "maxLength": 250,
+      "required": true,
+      "minLength": 1
+    },
+    "Description_Short": {
+      "maxLength": 300,
+      "minLength": 5,
+      "type": "string"
+    },
+    "Description": {
+      "maxLength": 800,
+      "minLength": 5,
+      "type": "text"
+    },
+    "Identifier": {
+      "maxLength": 40,
+      "required": true,
+      "unique": true,
+      "minLength": 10,
+      "type": "string"
+    },
+    "Active": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "Images": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "projects": {
+      "collection": "project",
+      "via": "categories",
+      "dominant": true
+    },
+    "articles": {
+      "collection": "article",
+      "via": "categories",
+      "dominant": true
+    }
+  }
+}

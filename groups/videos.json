@@ -1,0 +1,37 @@
+{
+  "info": {
+    "name": "Videos",
+    "description": ""
+  },
+  "connection": "default",
+  "collectionName": "groups_videos",
+  "attributes": {
+    "Title": {
+      "required": true,
+      "minLength": 2,
+      "maxLength": 250,
+      "type": "string"
+    },
+    "Description": {
+      "minLength": 2,
+      "maxLength": 500,
+      "type": "string"
+    },
+    "Video": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "Active": {
+      "required": true,
+      "default": true,
+      "type": "boolean"
+    },
+    "Order": {
+      "type": "integer",
+      "required": true,
+      "default": 1
+    }
+  }
+}

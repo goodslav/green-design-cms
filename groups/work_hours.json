@@ -1,0 +1,20 @@
+{
+  "info": {
+    "name": "Work_Hours",
+    "description": "Opening Hours Field"
+  },
+  "connection": "default",
+  "collectionName": "groups_work_hours",
+  "attributes": {
+    "Day_Interval": {
+      "required": true,
+      "type": "string"
+    },
+    "Opening_Hours": {
+      "type": "string"
+    },
+    "Closing_Hours": {
+      "type": "string"
+    }
+  }
+}

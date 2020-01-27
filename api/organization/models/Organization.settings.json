@@ -1,0 +1,67 @@
+{
+  "connection": "default",
+  "collectionName": "organization",
+  "info": {
+    "name": "organization",
+    "description": "Main organization profile with organization's info"
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Logos": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "Email": {
+      "type": "email"
+    },
+    "Meta_Description": {
+      "type": "text",
+      "maxLength": 250,
+      "minLength": 5
+    },
+    "Phones": {
+      "group": "phones",
+      "type": "group",
+      "repeatable": true
+    },
+    "Addresses": {
+      "group": "addresses",
+      "repeatable": true,
+      "type": "group"
+    },
+    "Identifier": {
+      "maxLength": 40,
+      "unique": true,
+      "minLength": 10,
+      "type": "string",
+      "required": true
+    },
+    "Date_Established": {
+      "type": "date"
+    },
+    "Work_Hours": {
+      "group": "work_hours",
+      "repeatable": true,
+      "required": true,
+      "type": "group"
+    },
+    "Description": {
+      "maxLength": 1500,
+      "minLength": 5,
+      "type": "richtext"
+    },
+    "Map_Info": {
+      "group": "gmaps_info",
+      "type": "group"
+    }
+  }
+}
