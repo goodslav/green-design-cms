@@ -62,6 +62,11 @@
     "Map_Info": {
       "group": "gmaps_info",
       "type": "group"
+    },
+    "Social_Links": {
+      "group": "social_links",
+      "type": "group",
+      "repeatable": true
     }
   }
 }

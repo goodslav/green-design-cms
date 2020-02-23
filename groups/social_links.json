@@ -1,0 +1,33 @@
+{
+  "info": {
+    "name": "Social_Links",
+    "description": "Група за добавяне на линкове към профили в социалните мрежи"
+  },
+  "connection": "default",
+  "collectionName": "groups_social_links",
+  "attributes": {
+    "Link": {
+      "minLength": 10,
+      "maxLength": 1000,
+      "required": true,
+      "type": "string"
+    },
+    "Active": {
+      "default": true,
+      "required": true,
+      "type": "boolean"
+    },
+    "Type": {
+      "enum": [
+        "unknown",
+        "facebook",
+        "youtube",
+        "instagram",
+        "linkedin",
+        "twitter",
+        "land8"
+      ],
+      "type": "enumeration"
+    }
+  }
+}
