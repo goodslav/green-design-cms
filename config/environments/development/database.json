@@ -4,15 +4,14 @@
     "default": {
       "connector": "strapi-hook-mongoose",
       "settings": {
-        "database": "green-design",
-        "host": "127.0.0.1",
-        "srv": false,
-        "port": 27017,
-        "username": "",
-        "password": ""
+        "client": "mongo",
+        "uri": "mongodb+srv://goodslav:Trick.Master.123@greendesign-cluster-shard-00-00-8htza.mongodb.net:27017,greendesign-cluster-shard-00-01-8htza.mongodb.net:27017,greendesign-cluster-shard-00-02-8htza.mongodb.net:27017/test?ssl=true&replicaSet=greendesign-cluster-shard-0&authSource=admin&retryWrites=true&w=majority",
+        "database": "greendesign",
+        "srv": true
       },
       "options": {
-        "authenticationDatabase": ""
+        "ssl": true,
+        "useUnifiedTopology": false
       }
     }
   }
