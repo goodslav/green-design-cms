@@ -5,7 +5,7 @@
       "connector": "strapi-hook-mongoose",
       "settings": {
         "client": "mongo",
-        "uri": "mongodb+srv://goodslav:Trick.Master.123@greendesign-cluster-shard-00-00-8htza.mongodb.net:27017,greendesign-cluster-shard-00-01-8htza.mongodb.net:27017,greendesign-cluster-shard-00-02-8htza.mongodb.net:27017/test?ssl=true&replicaSet=greendesign-cluster-shard-0&authSource=admin&retryWrites=true&w=majority",
+        "uri": "mongodb://goodslav:Trick.Master.123@greendesign-cluster-shard-00-00-8htza.mongodb.net:27017,greendesign-cluster-shard-00-01-8htza.mongodb.net:27017,greendesign-cluster-shard-00-02-8htza.mongodb.net:27017/test?ssl=true&replicaSet=greendesign-cluster-shard-0&authSource=admin&retryWrites=true&w=majority",
         "database": "greendesign",
         "srv": true
       },
